@@ -1,0 +1,434 @@
+/* === FONT & RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fffaf9;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background-color: #ffb4b4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 10px rgba(255, 180, 180, 0.3);
+}
+
+.nav-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffeaea;
+}
+
+/* === HERO SECTION === */
+.hero {
+  background: linear-gradient(to bottom right, #ffdcdc, #ffb4b4);
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero h1 span {
+  color: #fff0f0;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #fff;
+  color: #ff9a9a;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #ffeaea;
+}
+
+/* === TENTANG === */
+.about {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #666;
+}
+
+/* === STRUKTUR KELAS === */
+.struktur {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: #fff0f0;
+}
+
+.struktur h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+.wali-kelas {
+  margin-bottom: 40px;
+}
+
+.anggota {
+  display: inline-block;
+  margin: 15px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(255, 180, 180, 0.4);
+  padding: 15px;
+  width: 150px;
+}
+
+.anggota img {
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.anggota .nama {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.jabatan {
+  background-color: #ffdcdc;
+  color: #444;
+  font-size: 0.9rem;
+  border-radius: 10px;
+  padding: 4px 8px;
+  margin-bottom: 8px;
+}
+/* === DATA SISWA (KARTU SEPERTI GURU, TANPA JENIS KELAMIN) === */
+.data-siswa {
+  padding: 100px 20px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #ffeaea, #ffdcdc);
+  border-top: 5px solid #ffb4b4;
+  border-bottom: 5px solid #ffb4b4;
+}
+
+.data-siswa h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #444;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.data-siswa .keterangan-org {
+  margin-bottom: 45px;
+  color: #666;
+  font-size: 1.05rem;
+}
+
+/* Jadikan tabel siswa tampil seperti kartu */
+.tabel-siswa {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  background: none;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tabel-siswa thead {
+  display: none;
+}
+
+.tabel-siswa tbody {
+  display: contents;
+}
+
+.tabel-siswa tr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff7f7;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 180, 180, 0.4);
+  width: 200px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tabel-siswa tr:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 180, 180, 0.5);
+  background-color: #fff0f0;
+}
+
+.tabel-siswa td {
+  border: none;
+  padding: 4px 0;
+}
+
+/* Nomor absen */
+.tabel-siswa td:nth-child(1) {
+  font-weight: 700;
+  color: #ff8a8a;
+  background: #ffeaea;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+/* Nama siswa */
+.tabel-siswa td:nth-child(2) {
+  font-weight: 600;
+  color: #444;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* Hapus kolom jenis kelamin */
+.tabel-siswa td:nth-child(3) {
+  display: none !important;
+}
+
+/* Organisasi */
+.tabel-siswa td:nth-child(4) {
+  font-size: 0.9rem;
+  color: #ff8a8a;
+  font-weight: 500;
+  background: #ffeaea;
+  padding: 4px 10px;
+  border-radius: 8px;
+  margin-top: 5px;
+}
+
+/* Foto siswa */
+.tabel-siswa td:nth-child(5) img {
+  width: 120px;
+  height: 120px;
+  border-radius: 15px;
+  border: 3px solid #ffdcdc;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.tabel-siswa td:nth-child(5) img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .tabel-siswa tr {
+    width: 150px;
+  }
+
+  .tabel-siswa td:nth-child(5) img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .tabel-siswa td:nth-child(2) {
+    font-size: 0.9rem;
+  }
+}
+
+/* === JADWAL === */
+.jadwal {
+  background-color: #fff0f0;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.tabel-jadwal {
+  width: 85%;
+  max-width: 900px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(255, 180, 180, 0.3);
+  background: white;
+}
+
+.tabel-jadwal th {
+  background-color: #ffb4b4;
+  color: white;
+  padding: 14px;
+}
+
+.tabel-jadwal td {
+  padding: 12px;
+  border-bottom: 1px solid #ffeaea;
+}
+
+.tabel-jadwal tr:hover {
+  background-color: #fff6f6;
+}
+
+/* === GURU === */
+.guru {
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.guru-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.guru-card {
+  background: #fff7f7;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(255, 180, 180, 0.4);
+  width: 220px;
+  padding: 15px;
+  text-align: center;
+}
+
+.guru-card img {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+/* === GALERI (3 di atas dan 3 di bawah) === */
+.galeri {
+  background: #fff0f0;
+  padding: 90px 20px;
+  text-align: center;
+}
+
+.galeri h2 {
+  font-size: 2.3rem;
+  margin-bottom: 10px;
+  color: #444;
+  font-weight: 700;
+}
+
+.galeri p {
+  color: #666;
+  margin-bottom: 40px;
+  font-size: 1rem;
+}
+
+.galeri-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.galeri-container img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(255, 180, 180, 0.35);
+  transition: transform 0.35s, box-shadow 0.35s;
+  object-fit: cover;
+}
+
+.galeri-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 180, 180, 0.5);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: #ffb4b4;
+  text-align: center;
+  padding: 25px;
+  color: white;
+  font-size: 0.95rem;
+  box-shadow: 0 -2px 10px rgba(255, 180, 180, 0.3);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .anggota {
+    width: 120px;
+  }
+
+  .tabel-siswa {
+    font-size: 0.85rem;
+  }
+
+  .guru-card {
+    width: 160px;
+  }
+
+  .galeri-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .galeri-container {
+    grid-template-columns: 1fr;
+  }
+}
